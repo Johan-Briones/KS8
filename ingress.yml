@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-ingress
+spec:
+  rules:
+    - host: api.jbriones.com
+      http:
+        paths:
+          - path: /icecream
+            pathType: Prefix
+            backend:
+              service:
+                name: rust-api-service
+                port:
+                  number: 80
