@@ -13,7 +13,7 @@ spec:
         app: rust_api
     spec:
       containers:
-        - name: rust_api
+        - name: apirust
           image: johanbriones/apirust
           ports:
             - containerPort: 80
